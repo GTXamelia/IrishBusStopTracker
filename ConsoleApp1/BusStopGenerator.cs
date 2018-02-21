@@ -26,8 +26,8 @@ namespace IrishBusStopTracker
                 {
                     var obj = JsonConvert.DeserializeObject<RootObject>(wc.DownloadString("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=" + BusStopID[i] + "&format=json"));
 
-                    Console.WriteLine("--==Bus Stop({0})==--" +
-                                  "{1}", BusStopID[i], obj);
+                    Console.WriteLine("{0}\n--==Bus Stop({1})==--" +
+                                  "{2}", DateTime.Now.ToString(), BusStopID[i], obj);
                 }
             }
         }
