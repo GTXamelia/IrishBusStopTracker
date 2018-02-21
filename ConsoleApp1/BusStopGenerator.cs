@@ -17,7 +17,7 @@ namespace IrishBusStopTracker
             // 522961 - Opposite Londis Dublin Road (Galway)
             // 522811 - GMIT Dublin Road (Galway)
             /// To add more stops use "http://www.buseireann.ie/inner.php?id=403" and copy the ID of the bus stop
-            string[] BusStopID = new string[] { "522691"};
+            string[] BusStopID = new string[] {"522691"};
 
             for (int i = 0; i < BusStopID.Length; i++)
             {

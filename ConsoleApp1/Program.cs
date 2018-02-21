@@ -24,7 +24,7 @@ namespace IrishBusStopTracker
             while (true)
             {
                 PrintToScreen();
-                Thread.Sleep(1000 * 3 * 1); // Sleep for 10 Seconds
+                Thread.Sleep(1000 * 10 * 1); // Sleep for 10 Seconds
             }
         }
 
