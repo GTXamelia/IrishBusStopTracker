@@ -11,12 +11,13 @@ namespace IrishBusStopTracker
     class BusStopGenerator
     {
 
-        static void Main(string[] args)
+        public static void BusStopGeneratorMain()
         {
             // 522691 - gHotel Dublin Road (Galway)
             // 522961 - Opposite Londis Dublin Road (Galway)
             // 522811 - GMIT Dublin Road (Galway)
-            string[] BusStopID = new string[] { "522691", "522961", "522811" };
+            /// To add more stops use "http://www.buseireann.ie/inner.php?id=403" and copy the ID of the bus stop
+            string[] BusStopID = new string[] { "522691", "522961", "522811"};
 
             for (int i = 0; i < BusStopID.Length; i++)
             {
@@ -25,8 +26,8 @@ namespace IrishBusStopTracker
                 {
                     var obj = JsonConvert.DeserializeObject<RootObject>(wc.DownloadString("https://data.dublinked.ie/cgi-bin/rtpi/realtimebusinformation?stopid=" + BusStopID[i] + "&format=json"));
 
-                    Console.WriteLine("--==BusStop==--" +
-                                  "{0}", obj);
+                    Console.WriteLine("--==BusStop({0})==--" +
+                                  "{1}", BusStopID[i], obj);
                 }
             }
 
