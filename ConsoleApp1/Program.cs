@@ -31,6 +31,7 @@ namespace IrishBusStopTracker
         static void PrintToScreen()
         {
             Console.Clear();
+            testc.test();
             BusStopGenerator.BusStopGeneratorMain();
         }
     }
