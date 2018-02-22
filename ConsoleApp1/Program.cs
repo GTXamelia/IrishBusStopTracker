@@ -1,13 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
+﻿using System;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Timers;
 
 namespace IrishBusStopTracker
 {
@@ -31,7 +23,6 @@ namespace IrishBusStopTracker
         static void PrintToScreen()
         {
             Console.Clear();
-            testc.test();
             BusStopGenerator.BusStopGeneratorMain();
         }
     }
